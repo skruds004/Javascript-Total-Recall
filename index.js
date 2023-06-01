@@ -344,3 +344,78 @@ console.log(printLongestWord(['sausage', 'pancakes', 'cheese', 'bacon', 'muffins
 /*****************************************************
 * A. Make a User Object
 ****************************************************/
+
+const user = {
+    name: 'John',
+    email: 'john@example.com',
+    age: 21,
+    purchased: []
+};
+
+/*****************************************************
+* B. Update the User
+****************************************************/
+user.email = 'johnathan@example.com';
+user.age++;
+
+/*****************************************************
+* C. Adding Keys and Values
+****************************************************/
+user.location = "Home";
+
+/*****************************************************
+* D. Shopaholic
+****************************************************/
+user.purchased.push("carbohydrates");
+user.purchased.push("peace of mind");
+user.purchased.push("Merino Somethings");
+console.log(user.purchased[2]);
+
+/*****************************************************
+* E. Object within an Object
+****************************************************/
+user.friend = {
+    name: "Kevin",
+    age: 47,
+    location: "Somewhere",
+    purchased: []
+}
+console.log(user.friend.name);
+console.log(user.friend.location);
+user.friend.age = 55;
+user.friend.purchased.push("The One Ring");
+user.friend.purchased.push("A Latte");
+console.log(user.friend.purchased[1]);
+
+/*****************************************************
+* F. Loops
+****************************************************/
+for(item of user.purchased) {
+    console.log(item);
+}
+
+for(item of user.friend.purchased) {
+    console.log(item);
+}
+
+/*****************************************************
+* G. Functions Operating on Objects
+****************************************************/
+
+function updateUser() {
+    user.age++;
+    user.name = user.name.toUpperCase();
+}
+
+updateUser();
+console.log(user.name, user.age);
+
+function oldAndLoud(person) {
+    person.age++;
+    person.name = person.name.toUpperCase();
+}
+
+oldAndLoud(user.friend);
+console.log(user.friend.name, user.friend.age);
+oldAndLoud(user);
+console.log(user.name, user.age);
