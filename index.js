@@ -78,60 +78,60 @@ else {
 * A. The Basics
 ****************************************************/
 
-// for(let i = 0; i <= 10; i++) {
-//     console.log(i);
-// }
+for(let i = 0; i <= 10; i++) {
+    console.log(i);
+}
 
-// for(let i = 10; i <= 400; i++) {
-//     console.log(i);
-// }
+for(let i = 10; i <= 400; i++) {
+    console.log(i);
+}
 
-// for(let i = 12; i <= 4000; i += 3) {
-//     console.log(i);
-// }
+for(let i = 12; i <= 4000; i += 3) {
+    console.log(i);
+}
 
 /*****************************************************
 * B. Get Even
 ****************************************************/
 
-// let str = "";
-// for(let i = 1; i <= 100; i++) {
-//     str = i;
-//     if(i % 2 === 0) {
-//         str += " <-- is an even number";
-//     }
-//     console.log(str);
-// }
+let str = "";
+for(let i = 1; i <= 100; i++) {
+    str = i;
+    if(i % 2 === 0) {
+        str += " <-- is an even number";
+    }
+    console.log(str);
+}
 
 /*****************************************************
 * C. Give Me Five
 ****************************************************/
 
 //zero is technically a multiple of every number
-// for(let i = 0; i <= 100; i++) {
-//     if(i % 5 === 0) {
-//         console.log("I found a " + i + ". High five!");
-//     }
-//     if(i % 3 === 0) {
-//         console.log("I found a " + i + ". Three is a crowd");
-//     }
-// }
+for(let i = 0; i <= 100; i++) {
+    if(i % 5 === 0) {
+        console.log("I found a " + i + ". High five!");
+    }
+    if(i % 3 === 0) {
+        console.log("I found a " + i + ". Three is a crowd");
+    }
+}
 
 /*****************************************************
 * D. Savings Account
 ****************************************************/
 
-// let bank_account = 0;
-// for(let i = 1; i <= 10; i++) {
-//     bank_account += i;
-// }
-// console.log(bank_account);
-// //spent my money
-// bank_account = 0;
-// for(let i = 1; i <= 100; i++) {
-//     bank_account += i*2;
-// }
-// console.log(bank_account);
+let bank_account = 0;
+for(let i = 1; i <= 10; i++) {
+    bank_account += i;
+}
+console.log(bank_account);
+//spent my money
+bank_account = 0;
+for(let i = 1; i <= 100; i++) {
+    bank_account += i*2;
+}
+console.log(bank_account);
 
 //////////// III. Arrays & Control Flow //////////////////////////////////
 /*****************************************************
@@ -419,3 +419,38 @@ oldAndLoud(user.friend);
 console.log(user.friend.name, user.friend.age);
 oldAndLoud(user);
 console.log(user.name, user.age);
+
+//////////////////// CATS //////////////////////////////
+/*****************************************************
+* H. Mama cat
+****************************************************/
+const cat1 = {
+    name: 'Mama',
+    breed: 'Calico American Shorthair',
+    age: 15
+}
+/*****************************************************
+* H. Papa cat
+****************************************************/
+const cat2 = {
+    name: 'Papa',
+    breed: 'Black American Shorthair',
+    age: 17
+}
+/*****************************************************
+* J. Combine Cats
+****************************************************/
+function combineCats(mama, papa) {
+    const newCat = {
+        name: mama.name + papa.name,
+        age: 1,
+        breed: mama.breed + '-' + papa.breed
+    }
+    return newCat;
+}
+console.log(combineCats(cat1, cat2));
+/*****************************************************
+* K. Cat Brain Bender
+****************************************************/
+console.log(combineCats(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)),
+            combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2))));
