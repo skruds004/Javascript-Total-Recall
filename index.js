@@ -6,9 +6,9 @@
 * 3. How do we assign an existing variable to a new variable?
 ** Using the assignment operator, EX) let newVar = existingVar;
 * 4. Remind me, what are declare, assign, and define?
-** Delcaration is registering the variable in its scope
+** Declaration is setting the variable in memory and giving it a name
 ** Assignment is giving a value to the variable
-** Defining a variable is giving it a type
+** Defining a variable is the declaration and the assignment of the variable
 * 5. What is pseudocoding and why should you do it?
 ** Pseudocoding is planning out your code in informal language that is used to design your program before writing it
 * 6. What percentage of time should be spent thinking about how you're going to solve a problem vs actually typing in code to solve it?
